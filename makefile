@@ -6,9 +6,9 @@ CXXFLAGS += -Wall
 CXXFLAGS += -pedantic-errors
 CXXFLAGS += -g
 
-OBJS = main.o Menu.o
-SRCS = main.cpp Menu.cpp
-HEADERS = Menu.hpp
+OBJS = main.o Menu.o Queue.o
+SRCS = main.cpp Menu.cpp Queue.cpp
+HEADERS = Menu.hpp Queue.hpp
 
 lab7: $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o lab7
