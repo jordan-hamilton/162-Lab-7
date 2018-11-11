@@ -27,10 +27,10 @@ class Menu {
     ~Menu();
     void addMenuItem(const std::string &menuItem);
     void displayMenu();
-    int getIntChoiceFromPrompt(const std::string &prompt, const int &minVal, const int &maxVal, const bool &displayTheMenu);
-    int getIntChoiceFromPrompt(const int &minVal, const int &maxVal, const bool &displayTheMenu);
-    std::string getStringFromPrompt(const std::string &prompt, const bool &displayTheMenu);
-    std::string getStringFromPrompt(const bool &displayTheMenu);
+    int getIntFromPrompt(const std::string &prompt, const int &minVal, const int &maxVal, const bool &displayTheMenu);
+    int getIntFromPrompt(const int &minVal, const int &maxVal, const bool &displayTheMenu);
+    std::string getStrFromPrompt(const std::string &prompt, const bool &displayTheMenu);
+    std::string getStrFromPrompt(const bool &displayTheMenu);
     void makeIntArray(int arraySize);
     void populateIntArray();
     int* getIntArray();

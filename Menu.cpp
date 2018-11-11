@@ -64,7 +64,7 @@ void Menu::addMenuItem(const string &menuItem) {
 ** prompt is repeated. A boolean is passed to specify whether the entire menu should be
 ** displayed along with the prompt for a selection.
 ***********************************************************************************************/
-int Menu::getIntChoiceFromPrompt(const string &prompt, const int &minVal, const int &maxVal, const bool &displayTheMenu) {
+int Menu::getIntFromPrompt(const string &prompt, const int &minVal, const int &maxVal, const bool &displayTheMenu) {
 
   string userInput;
 
@@ -95,7 +95,7 @@ return stoi(userInput);
 ** displayed along with the prompt for a selection. If the menu was initialized with a prompt,
 ** this is displayed prior to accepting user input.
 ***********************************************************************************************/
-int Menu::getIntChoiceFromPrompt(const int &minVal, const int &maxVal, const bool &displayTheMenu) {
+int Menu::getIntFromPrompt(const int &minVal, const int &maxVal, const bool &displayTheMenu) {
 
   string userInput;
 
@@ -124,7 +124,7 @@ return stoi(userInput);
 ** a reference to a boolean to output possible menu choices if set to true. User input is then
 ** stored in the lastEnteredString data member and returned.
 ***********************************************************************************************/
-std::string Menu::getStringFromPrompt(const std::string &prompt, const bool &displayTheMenu) {
+std::string Menu::getStrFromPrompt(const std::string &prompt, const bool &displayTheMenu) {
 
   cout << prompt << endl;
 
@@ -144,7 +144,7 @@ std::string Menu::getStringFromPrompt(const std::string &prompt, const bool &dis
 ** If the menu was initialized with a prompt, this is displayed prior to accepting user input.
 ** User input is then stored in the lastEnteredString data member and returned.
 ***********************************************************************************************/
-std::string Menu::getStringFromPrompt(const bool &displayTheMenu) {
+std::string Menu::getStrFromPrompt(const bool &displayTheMenu) {
 
   if (!menuPrompt.empty()) {
     cout << menuPrompt << endl;
@@ -179,7 +179,7 @@ void Menu::makeIntArray(int arraySize) {
 *********************************************************************/
 void Menu::populateIntArray() {
   for (int i = 0; i < getIntArraySize(); i++) {
-    intArray[i] = getIntChoiceFromPrompt("Enter an integer", 0, 100000, false);
+    intArray[i] = getIntFromPrompt("Enter an integer", -100000, 100000, false);
   }
 
 }
@@ -212,7 +212,7 @@ void Menu::setIntArraySize(int arraySize) {
 
 /*********************************************************************
 ** Description: Returns the size of the options vector.
-** Used with the getIntChoiceFromPrompt fucntion to determine the
+** Used with the getIntFromPrompt function to determine the
 ** maximum valid selection for a menu item.
 *********************************************************************/
 int Menu::getMenuChoices() {
