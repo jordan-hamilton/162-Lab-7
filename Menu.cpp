@@ -212,7 +212,7 @@ void Menu::setIntArraySize(int arraySize) {
 
 /*********************************************************************
 ** Description: Returns the size of the options vector.
-** Used with the getIntFromPrompt function to determine the
+** Used with the getIntFromPrompt method to determine the
 ** maximum valid selection for a menu item.
 *********************************************************************/
 int Menu::getMenuChoices() {
@@ -239,11 +239,11 @@ void Menu::setEnteredString(const std::string &inputStr) {
 
 
 /*********************************************************************
-** Description: This function accepts a reference to a string, which
+** Description: This method accepts a reference to a string, which
 ** is then looped through to search for non-digit characters. The
 ** return value is true if there are only digits or a minus sign at
-** the first index in the string passed to the function, otherwise,
-** the function returns false.
+** the first index in the string passed to the method, otherwise,
+** the method returns false.
 *********************************************************************/
 bool Menu::validateInput(const string &inputStr) {
   bool isValid = true;
@@ -271,7 +271,7 @@ bool Menu::validateInput(const string &inputStr) {
 
 /***********************************************************************************************
 ** Description: Takes a reference to an integer value to check, and minimum and maximum values.
-** If the input is an integer and in the valid range, the function returns true. Otherwise,
+** If the input is an integer and in the valid range, the method returns true. Otherwise,
 ** it returns false.
 ***********************************************************************************************/
 bool Menu::validateRange(const int &inputVal, const int &minVal, const int &maxVal) {
