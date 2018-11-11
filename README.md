@@ -5,7 +5,7 @@
 * Implement a circular linked list data type
 * Learn how to modify data in a linked list
 
-In this lab, we will create a queue data structure utilizing circular linked list.
+In this lab, we will create a **queue** data structure utilizing circular linked list.
 
 **Requirements**
 
