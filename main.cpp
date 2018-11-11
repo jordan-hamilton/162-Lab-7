@@ -1,12 +1,12 @@
 /***********************************************************************************************
 ** Program name: Lab 7
 ** Author: Jordan Hamilton
-** Date: 11/10/2018
-** Description: This fantasy fighter game prompts the user to select two fighters from the
-** following possible choices: Barbarian, Blue Men, Harry Potter, Medusa, and Vampire. Once
-** selected, the characters are initialized with their unique attributes and a random character
-** randomly attacks the other character. The fight continues, displaying results until one
-** Character's strength is depleted.
+** Date: 11/11/2018
+** Description: This program displays a menu asking the user to add an integer to the end of a
+** queue in a new node, display the integer data member of the node at the front of the queue,
+** remove the node at the front of the queue, display the values of all nodes in the queue, or
+** quit the program. A method in the Queue object performs the appropriate action on a
+** circular linked list based on the user's choice.
 ***********************************************************************************************/
 
 #include <iostream>
@@ -35,13 +35,13 @@ int main() {
 
   do {
 
-    choice = mainMenu->getIntChoiceFromPrompt(1, mainMenu->getMenuChoices(), true);
+    choice = mainMenu->getIntFromPrompt(1, mainMenu->getMenuChoices(), true);
 
     cout << endl;
 
     switch (choice)  {
 
-      case 1 : queue->addBack( mainMenu->getIntChoiceFromPrompt("Enter an integer to add to the back of the queue:", -100000, 100000, false) );
+      case 1 : queue->addBack( mainMenu->getIntFromPrompt("Enter an integer to add to the back of the queue:", -100000, 100000, false) );
                break;
 
       case 2 : if ( !queue->isEmpty() ) {
@@ -84,6 +84,10 @@ int main() {
 }
 
 
+/***********************************************************************************************
+** Description: This function takes a pointer to a Menu object, then calls the addMenuItem
+** method to add the approprate menu options to the program's menu.
+***********************************************************************************************/
 void populateMenu(Menu* mainMenu) {
 
   mainMenu->addMenuItem("Add a value to the back of the queue");
