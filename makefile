@@ -17,4 +17,4 @@ $(OBJS): $(SRCS) $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c $(@:.o=.cpp)
 
 clean:
-	rm *.o lab6
+	rm *.o lab7
